@@ -5,16 +5,18 @@ const {
   registerController,
   currentUserController,
   userStatusController,
+  avatarController,
 } = require("../../controllers/auth");
 
-const { userToken } = require("../../middleware/userToken");
 const {
   registerUserValid,
   loginUserValid,
 } = require("../../middleware/schemas/validationUser");
-const { validation } = require("./middleware/validationBody");
+const { userToken, validation, upload } = require("../../middleware");
 
 const router = express.Router();
+
+router.patch("/avatars", userToken, upload.single("avatar"), avatarController);
 
 router.get("/current", userToken, currentUserController);
 router.patch("/", userToken, userStatusController);
