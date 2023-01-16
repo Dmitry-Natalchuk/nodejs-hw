@@ -27,6 +27,4 @@ const userToken = async (req, res, next) => {
   }
 };
 
-module.exports = {
-  userToken,
-};
+module.exports = userToken;

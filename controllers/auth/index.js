@@ -5,6 +5,7 @@ const {
   currentUserController,
   userStatusController,
 } = require("./userController");
+const avatarController = require("./avatarController");
 
 module.exports = {
   loginController,
@@ -12,4 +13,5 @@ module.exports = {
   registerController,
   currentUserController,
   userStatusController,
+  avatarController,
 };
