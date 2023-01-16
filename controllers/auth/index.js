@@ -6,6 +6,8 @@ const {
   userStatusController,
 } = require("./userController");
 const avatarController = require("./avatarController");
+const verifyEmailController = require("./verifyEmailController");
+const verifyUserController = require("./verifyUserController");
 
 module.exports = {
   loginController,
@@ -14,4 +16,6 @@ module.exports = {
   currentUserController,
   userStatusController,
   avatarController,
+  verifyEmailController,
+  verifyUserController,
 };

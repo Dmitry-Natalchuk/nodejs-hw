@@ -8,6 +8,7 @@ const registerUserValid = Joi.object({
     })
     .required(),
   password: Joi.string().min(8),
+  subscription: Joi.string(),
 });
 
 const loginUserValid = Joi.object({
